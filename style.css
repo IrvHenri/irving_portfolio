@@ -156,6 +156,10 @@ section {
   color: #383838;
 }
 
+.section__title:first-of-type {
+  margin-top: 2em;
+}
+
 .section__title {
   position: relative;
   font-size: 2rem;
@@ -376,8 +380,7 @@ small {
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
-
-  min-width: 350px;
+  min-width: 300px;
   max-width: 450px;
 }
 
@@ -447,8 +450,6 @@ form button {
 
   .icon-container {
     flex-wrap: wrap;
-  }
-  #projects {
   }
 
   .project-container {
