@@ -55,8 +55,10 @@ h1 {
 
 .nav-link {
   margin: 0.2em;
+  margin-right: 3em;
   text-decoration: none;
   color: var(--text-color);
+  transition: 200ms ease-in-out;
 }
 
 .nav-link:hover {
@@ -76,13 +78,14 @@ h1 {
 /* Home Section */
 /* ---------- */
 
-.darcula {
+.dracula {
   font-family: monospace;
   background-color: var(--background-color);
   color: var(--text-color);
 }
 .jumbotron {
   height: 100vh;
+  position: relative;
 }
 
 .keyword {
@@ -125,6 +128,27 @@ h1 {
   animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
+.jumbotron a {
+  color: red;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  right: 50%;
+  font-size: 2rem;
+  animation: arrowAnimation 1s linear infinite;
+}
+
+/* Arrow Animation */
+@keyframes arrowAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
 /* The typing effect */
 @keyframes typing {
   from {
@@ -147,7 +171,7 @@ h1 {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -186,6 +210,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0;
 }
 
 #about,
@@ -195,10 +220,17 @@ section {
 
 .about-me-section {
   background-color: #fff;
-  box-shadow: var(--bs);
   border-radius: 5px;
   padding: 2.5em 1.5em;
   text-align: left;
+}
+
+.about-me-section a {
+  transition: background-color 0.3s linear;
+}
+
+.about-me-section a:hover {
+  background: #d6a75a;
 }
 
 .cv-button {
@@ -232,10 +264,13 @@ section {
 .icon-container li {
   list-style: none;
   margin: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .icon-container li i {
   font-size: 3em;
+  margin-bottom: 0.3em;
 }
 
 /* PROJECTS */
@@ -243,6 +278,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0;
+  margin-bottom: 3em;
 }
 
 #projects h2 {
@@ -258,13 +295,13 @@ section {
 .project-card {
   display: flex;
   align-items: flex-start;
-  box-shadow: var(--bs);
+
   transition: all 0.2s ease-in;
   border-radius: 5px;
   background-color: #fff;
   width: 48%;
   max-width: 600px;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   padding: 1em;
 }
 .project-card:hover {
@@ -336,10 +373,10 @@ small {
 /* footer */
 
 .footer {
-  text-align: center;
   background: #111;
   color: var(--text-color);
-  padding: 2em;
+  display: flex;
+  justify-content: center;
 }
 
 .footer a {
@@ -377,40 +414,39 @@ small {
 
 .contact-form {
   display: flex;
-  margin: 0 auto;
   flex-direction: column;
   align-items: center;
   min-width: 300px;
-  max-width: 450px;
-}
-
-form {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: var(--background-color);
-  box-shadow: var(--bs);
+  width: 50%;
   padding: 1.5em;
-  border-radius: 5px;
-  color: #111111;
-  width: 100%;
+}
+.contact-form h2 {
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 0.5em;
 }
 
 form input {
   width: 100%;
-  border-radius: 5px;
   margin-bottom: 0.5em;
   padding: 0.7em;
+}
+
+input[name="name"],
+input[type="email"],
+textarea[name="message"] {
+  outline: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #6a6a6a;
+  color: #fff;
 }
 
 form textarea {
   width: 100%;
   padding: 0.7em;
   margin-bottom: 1em;
-  height: 200px;
-  border-radius: 5px;
   resize: none;
-  border: 2px solid var(--keyword-color);
 }
 
 form button {
@@ -418,6 +454,13 @@ form button {
   background: var(--declaration-color);
   border: none;
   border-radius: 5px;
+  align-self: flex-start;
+  transition: background-color 0.3s linear;
+}
+
+form button:hover {
+  background: #d6a75a;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -480,5 +523,15 @@ form button {
   }
   .project-links a:first-of-type {
     margin-left: 0;
+  }
+  .nav-link {
+    margin-right: 1em;
+  }
+  .footer {
+    text-align: center;
+  }
+
+  .footer h2 {
+    font-size: 2rem;
   }
 }

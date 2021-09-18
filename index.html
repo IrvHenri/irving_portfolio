@@ -23,7 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./style.css" />
-  
+    <script src="https://kit.fontawesome.com/c66224fb0c.js" crossorigin="anonymous"></script>
   </head>
   <body >
     <nav class="navbar darknav " id="navbar">
@@ -41,18 +41,20 @@
       
      <!-- Home Section -->
 
-      <section class="jumbotron darcula" id="home">
+      <section class="jumbotron dracula" id="home">
         <div class="typewriter">
           <h1><span class="keyword">(</span> <span class="declaration">()</span><span class="arrow"> =></span> 
             "Hi, I'm Irving"<span class="keyword">)</span><span class="end-bracket">()</span>;</h1> 
             
           <p class="lead comment"># I like to build things</p>
+          
         </div>
+        <a href="#about"><i class="fas fa-angle-double-down"></i></a>
       </section>
      <div class="wrapper">
       <section id="about"   >
 
-        <h2 class="section__title">about me</h2>
+        <h2 class="section__title">About me</h2>
         
         
         <div data-aos="zoom-in" class="about-me-section" >
@@ -65,24 +67,24 @@
       </section>
       <section id="skills"   >
     
-        <h2 class="section__title">a few of my skills</h2>
-        <ul data-aos="zoom-in"  class="icon-container aos-init aos-animate">
-          <li><i class="devicon-html5-plain colored"></i></li>
-          <li><i class="devicon-css3-plain colored"></i></li>
-          <li><i class="devicon-sass-original colored"></i></li>
-          <li><i class="devicon-bootstrap-plain colored"></i></li>
-          <li><i class="devicon-javascript-plain colored"></i></li>
+        <h2 class="section__title">A few of my skills</h2>
+        <ul   class="icon-container ">
+          <li><i class="devicon-html5-plain colored"></i>HTML5</li>
+          <li><i class="devicon-css3-plain colored"></i>CSS3</li>
+          <li><i class="devicon-sass-original colored"></i>SASS</li>
+          <li><i class="devicon-bootstrap-plain colored"></i>Bootstrap</li>
+          <li><i class="devicon-javascript-plain colored"></i>JavaScript</li>
+          <li><i class="devicon-react-original colored"></i>React</li>
           
-          <i class="devicon-react-original colored"></i>
-          <li><i class="devicon-typescript-plain colored"></i></li>
+          <li><i class="devicon-typescript-plain colored"></i>Typescript</li>
           
-          <li><i class="devicon-nodejs-plain colored"></i></li>
+          <li><i class="devicon-nodejs-plain colored"></i>Node.js</li>
           <li><i class="devicon-express-original colored"></i>
-          </li>
-          <li><i class="devicon-postgresql-plain colored"></i></li>
-          <li><i class="devicon-mongodb-plain colored"></i></li>
+          Express</li>
+          <li><i class="devicon-postgresql-plain colored"></i>PostgreSQL</li>
+          <li><i class="devicon-mongodb-plain colored"></i>MongoDB</li>
     
-          <li><i class="devicon-git-plain colored"></i></li>
+          <li><i class="devicon-git-plain colored"></i>Git</li>
       
         </ul>
         
@@ -116,7 +118,7 @@
                 <span class="skill">MongoDB</span>
                 <span class="skill">Cypress</span>
                 </div>
-                <p class="project-body">A single page react app which allows users to create a cryptocurrency portfolio to keep track of their profits, losses and portfolio valuation.</p>
+                <p class="project-body">A react app which allows users to create a cryptocurrency portfolio to keep track of their profits, losses and portfolio valuation.</p>
                 <div class="project-links">
          
                   <a href="https://practical-shirley-0303e5.netlify.app/" target="#blank" rel="noreferrer">
@@ -154,7 +156,7 @@
                 <span class="skill">Storybook</span>
                 
               </div>
-              <p class="project-body">A single page react app that allows users to book, edit and cancel interviews.</p>
+              <p class="project-body">A react app that allows users to book, edit and cancel interviews.</p>
               <div class="project-links">
           
                 <a href="https://distracted-pare-332419.netlify.app/" target="#blank" rel="noreferrer">
@@ -241,19 +243,19 @@
     
     <!-- Footer -->
     <footer class="footer" id="contact">
-      <h3 class="section__title">Contact</h3>
+      
       
       <div class="contact-form ">
+        <h2 class="section__title">Say hello</h2>
         <form
 
         action="https://formspree.io/f/xdoynpvd"
         method="POST"
       >
-      
-      <div class="top-row-form"></div>
+    
       <input type="text" name="name" id="name" placeholder="Name" required="">
       <input type="email" name="_replyto" placeholder="Email">
-      <textarea name="message" placeholder="Type your message"></textarea>
+      <textarea name="message" placeholder="Message"></textarea>
       
       
         <button type="submit">Send</button>
