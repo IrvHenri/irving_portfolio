@@ -135,6 +135,7 @@ h1 {
   left: 50%;
   right: 50%;
   font-size: 2rem;
+  width: fit-content;
   animation: arrowAnimation 1s linear infinite;
 }
 
