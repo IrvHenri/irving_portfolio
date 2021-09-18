@@ -181,27 +181,19 @@ section {
 }
 
 .section__title:first-of-type {
-  margin-top: 2em;
+  margin-top: 4em;
 }
 
 .section__title {
-  position: relative;
   font-size: 2rem;
   margin-bottom: 2em;
+  border-bottom: 2px solid var(--declaration-color);
+  width: fit-content;
+  text-align: center;
 }
 
-.section__title::after {
-  content: "";
-  position: absolute;
-  height: 4px;
-  bottom: -12px;
-  left: 45%;
-  background: linear-gradient(
-    to left,
-    rgba(122, 122, 122, 0.034),
-    rgba(0, 0, 0, 0.75),
-    rgba(122, 122, 122, 0.034)
-  );
+.contact-form .section__title {
+  border-bottom: 0;
 }
 
 /* About */
@@ -249,6 +241,9 @@ section {
 /* Skills */
 /* ---------------- */
 #skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   text-align: center;
 }
@@ -277,7 +272,7 @@ section {
 #projects {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   padding: 0;
   margin-bottom: 3em;
 }
@@ -474,10 +469,6 @@ form button:hover {
 
   .jumbotron {
     text-align: center;
-  }
-
-  .section__title {
-    font-size: 2em;
   }
 
   .typewriter h1 {
